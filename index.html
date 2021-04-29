@@ -9,7 +9,9 @@
 <body>
     <h1>인덱스 페이지 입니다(김구라)</h1>
     <button id="getBtn">한명 뽑기</button>
+    <button id="moreBtn">한명 더 뽑기</button>
     <p id="result"></p>
+    <p id="result2"></p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati, fugiat harum voluptatibus beatae explicabo, neque commodi corporis repellat a esse sunt necessitatibus illo fuga officiis quas ad tempora rerum!</p>
     <script>
         let names=["강륜화","강민경","강민재","강희은","고지은",
@@ -26,6 +28,11 @@
             let ranNum=Math.floor(Math.random()*31);
             // names 배열에서 랜덤한 인덱스에 해당하는 이름을 p 요소에 출력하기 
             document.querySelector("#result").innerText=names[ranNum];
+        });
+        document.querySelector("#moreBtn").addEventListener("click", function(){
+            console.log("한번 더 버튼이 눌러졌네?");
+            let ranNum=Math.floor(Math.random()*31);
+            document.querySelector("#result2").innerText=names[ranNum];
         });
     </script>
 </body>
